@@ -8,28 +8,24 @@ export const Header = () => {
 	const [mobile, setMobile] = useState(false)
 	const handleActive = () => {}
 	return (
-		<header>
-			<ul className={`${mobile ? 'mobile-nav' : 'menu'}`}>
-				{menu.map(item => (
-					<li key={item.id}>
-						<Link
-							to={item.url}
-							onClick={handleActive}
-							className='link'
-						>
-							{item.text}
-						</Link>
-						<Link to={item.url} onClick={handleActive}>
-							<span>{item.icon}</span>
-						</Link>
-					</li>
-				))}
-			</ul>
-			<div className='icons'>
-				<button onClick={() => setMobile(!mobile)}>
-					{mobile ? <AiOutlineClose /> : <RiMenu3Line />}
-				</button>
-			</div>
-		</header>
-	)
+    <header>
+      <ul className={`${mobile ? "mobile-nav" : "menu"}`}>
+        {menu.map((item) => (
+          <li key={item.id}>
+            <Link to={item.url} onClick={handleActive} className="link">
+              {item.text}
+            </Link>
+            <Link to={item.url} onClick={handleActive}>
+              <span>{item.icon}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div className="icons">
+        <button onClick={() => setMobile(!mobile)}>
+          {mobile ? <AiOutlineClose /> : <RiMenu3Line />}
+        </button>
+      </div>
+    </header>
+  );
 }

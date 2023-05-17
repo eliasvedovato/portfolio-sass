@@ -32,30 +32,35 @@
 			width: 100%;
 			background-color: $indigo;
 			@include absolute;
+			position: fixed;
 			height: 100vh;
 			z-index: 999;
 			transition: width 1s, height 1s, background-color 1s ease-in-out;
 			@include flex(center, center, none);
+			flex-wrap: wrap;
 			flex-direction: column;
 			span {
-				display: none;
-				@include flex(start, start, none)
-			}
-			li {
-				margin: 30px;
-				a {
-					font-size: 50px;
+				// display: none;
+			visibility: hidden;
+				@include flex(start, start, none);
+				li {
+					margin: auto 0 auto;
+					a {
+						font-size: 25px;
+					}
 				}
 			}
+			
 		}
 		.icons {
 			visibility: visible;
 			@include absolute;
 			z-index: 10000;
-			top: 60px;
+			top: 20px;
 			width: 100%;
-			left: 35%;
+			left: 45%;
 			background: none;
+			position: fixed;
 			button {
 				&:hover {
 					color: red;
