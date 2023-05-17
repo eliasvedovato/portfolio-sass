@@ -70,13 +70,13 @@ export const side = [
   {
     id: 1,
     num: 85,
-    text: "Backend Development",
+    text: "Backend",
     class: "skill1",
   },
   {
     id: 2,
     num: 92,
-    text: "Frontend Development",
+    text: "Frontend",
     class: "skill2",
   },
   {

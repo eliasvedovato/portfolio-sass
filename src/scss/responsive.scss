@@ -1,57 +1,135 @@
+@include media-lg {
+	.about {
+		&_details {
+			&_content {
+				&_box {
+					@include flex(center, center, center);
+					flex-direction: column;
+					gap: 5px;
+				}
+			}
+		}
+		&_services {
+			&_boxs {
+				@include grids(2, 1fr, 40px);
+			}
+		}
+		&_price {
+			&_content {
+				@include grids(1, 1fr, 40px);
+			}
+		}
+	}
+}
+
 @include media-md {
-  header {
-    .menu {
-      display: none;
-    }
-    .mobile-nav {
-      display: block;
-      width: 100%;
-      background-color: $indigo;
-      @include absolute;
-      height: 100vh;
-      z-index: 999;
-      span {
-        display: none;
-      }
-      li {
-        margin: 30px;
-        a {
-          font-size: 50px;
+	header {
+		.menu {
+			display: none;
+		}
+		.mobile-nav {
+			display: block;
+			width: 100%;
+			background-color: $indigo;
+			@include absolute;
+			height: 100vh;
+			z-index: 999;
+			transition: width 1s, height 1s, background-color 1s ease-in-out;
+			@include flex(center, center, none);
+			flex-direction: column;
+			span {
+				display: none;
+				@include flex(start, start, none)
+			}
+			li {
+				margin: 30px;
+				a {
+					font-size: 50px;
+				}
+			}
+		}
+		.icons {
+			visibility: visible;
+			@include absolute;
+			z-index: 10000;
+			top: 60px;
+			width: 100%;
+			left: 35%;
+			background: none;
+			button {
+				&:hover {
+					color: red;
+					scale: 1.2;
+				}
+			}
+		}
+	}
+	.main-div {
+		flex-direction: column;
+		.side {
+			position: relative;
+			width: $w-full;
+			padding-bottom: 30px;
+		}
+		.sideContent {
+			height: max-content;
+		}
+
+		main {
+			width: 100%;
+		}
+	}
+	.about {
+		// border: 3px solid red;
+		&_services {
+			&_boxs {
+				@include grids(1, 1fr, 40px);
+			}
+		}
+		&_price {
+			&_content {
+				@include grids(1, 1fr, 40px);
+			}
+		}
+		&_details {
+			&_content {
+				@include grids(1, 1fr, 40px);
+				@include flex(center, center, none);
+				flex-direction: column;
+				padding-bottom: 50px;
+			}
+			&_bio {
+				&_box {
+					@include grids(1, 1fr, 40px);
+				}
+			}
+		}
+		&_sider {
+			&_content {
+				.card {
+					@include flex(center, center, none);
+					flex-direction: column;
+          &::after {
+            right: 20px
+          }
+				}
+        &_slideButton {
+          top: 60px;
         }
-      }
-    }
-    .icons {
-      @include absolute;
-      z-index: 10000;
-      top: 60px;
-      width: 100%;
-      left: 35%;
-      background: none;
-    }
-  }
-  .main-div {
-    flex-direction: column;
+        p {
+          padding: $p-md;
+        }
+			}
+		}
+	}
+}
 
-    .side {
-      position: relative;
-      width: $w-full;
-      height: auto;
-    }
-
-    main {
-      width: 100%;
-    }
-  }
-  .about {
-    &_services {
-      &_boxs {
-        @include grids(2, 1fr, 40px);
-      }
-    }
-    &_price {
-      &_content {
-        @include grids(2, 1fr, 40px);
-      }
-    }
-  }
+@include media-sm {
+	.about {
+		&_services {
+			&_boxs {
+				@include grids(1, 1fr, 40px);
+			}
+		}
+	}
 }

@@ -4,6 +4,7 @@ $primary: #01d85f;
 $indigo: #7635f5;
 $gray: #808080;
 $graydark: #34313f;
+$gray-dark: #343a40;
 $black: #201e29;
 $lightdark: #292633;
 $white: #fff;
@@ -16,7 +17,7 @@ $p-lg: 30px;
 $p-xl: 40px;
 $p-2xl: 50px;
 
-// padding
+// margin
 $sm: 10px;
 $m-sm: 15px;
 $m-md: 20px;
@@ -45,8 +46,6 @@ $h-2xl: 50px;
 $h-3xl: 10vh;
 $h-4xl: 20vh;
 $h-full: 100vh;
-
-$gray-dark: #343a40;
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
@@ -106,7 +105,7 @@ $sizes: (
   "2xl": 160px,
 );
 
-/*@function icon($size, $line-height) {
+@function icon($size, $line-height) {
   @return map-get($sizes, $size);
   @return map-get($sizes, $line-height);
 }
@@ -129,7 +128,6 @@ $sizes: (
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
 }
-*/
 
 @mixin icons($width, $height, $background, $size, $line, $backgroundHover) {
   width: $width;
@@ -234,13 +232,18 @@ $sizes: (
   }
 }
 
+@mixin media-sm {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
 @mixin media-md {
   @media screen and (max-width: $breakpoint-md) {
     @content;
   }
 }
-@mixin media-sm {
-  @media screen and (max-width: $breakpoint-sm) {
+@mixin media-lg {
+  @media screen and (max-width: $breakpoint-lg) {
     @content;
   }
 }

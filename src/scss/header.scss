@@ -1,16 +1,13 @@
 header {
   @include shadow;
-  display: flex;
-  @include flex(space-between, none, center);
+  @include flex(space-around, none, center);
   background-color: $black;
-
   ul {
     width: $w-4xl;
-    display: flex;
-    align-items: center;
+    @include flex(center, center, center);
+    gap: 30px;
     padding: 30px;
     li {
-      margin-right: $s;
       position: relative;
       a {
         text-transform: capitalize;
@@ -20,19 +17,17 @@ header {
       }
       span {
         color: $indigo;
-        @include absolute;
-        font-size: 50px;
-        top: -20px;
-        opacity: 0.3;
+        font-size: 30px;
+        opacity: 0.8;
       }
     }
   }
   .icons {
-    width: $s;
-    background: $lightdark;
+    visibility: hidden;
+    @include absolute;
     @include flex(center, none, none);
     button {
-      font-size: 50px;
+      font-size: 30px;
     }
   }
 }

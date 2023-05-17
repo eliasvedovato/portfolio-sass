@@ -32,7 +32,7 @@ button {
   width: $w-sm;
   background-color: $lightblue;
   @include shadow;
-  height: 105vh;
+  // height: 105vh;
 }
 main {
   width: $w-2xl;
@@ -89,7 +89,7 @@ $backgrouds: (
   line-height: 0.8;
   margin: 0 0 35px;
   position: relative;
-  padding: 0 0 13px;
+  padding: 0 0 40px;
   text-transform: capitalize;
 
   &::after {

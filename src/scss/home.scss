@@ -1,5 +1,6 @@
 .about {
   &_details {
+    @include grids(1, 1fr, 40px);
     &_content {
       @include grids(2, 1fr, 40px);
       margin-bottom: 50px;
@@ -18,7 +19,7 @@
     }
 
     &_bio {
-      margin: 50px 0;
+      margin-bottom: 70px;
       &_box {
         @include grids(2, 1fr, 30px);
 
@@ -94,7 +95,7 @@
 
   &_price {
     &_content {
-      @include grids(3, 1fr, 40px);
+      @include grids(2, 1fr, 40px);
     }
     .cards {
       @include cards(30px, $lightblue, $hover: false);
