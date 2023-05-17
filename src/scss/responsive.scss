@@ -80,7 +80,6 @@
 		}
 	}
 	.about {
-		// border: 3px solid red;
 		&_services {
 			&_boxs {
 				@include grids(1, 1fr, 40px);
